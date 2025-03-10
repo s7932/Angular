@@ -5,9 +5,13 @@
              {{student.id}}: {{student.name}} ,  {{student.email}} ,{{student.address}} ,{{student.phone}}
         </div>
     <div class="col-2">
-        <!-- <button class="btn btn-primary" (click)="editStudent(student)">Edit</button> -->
+        <button class="btn btn-primary" (click)="editStudent(student)">Edit</button>
         <button class="btn btn-danger" (click)="deleteStudent(student)">Delete</button>
     </div>
   </div>
     </li>
+
+    <br>
+    <button (click)="addStudent()">Add a new student</button>
+<student-details [student]="selectedStudent" ></student-details>
 </ul>
