@@ -1,5 +1,6 @@
 <ul class="list-group">
-    <li *ngFor="let student of students" class="list-group-item">
+    <li *ngFor="let student of students" class="list-group-item"
+    [ngClass]="{'active':student.active,'success': student.marksAvg && student.marksAvg > 90}">
         <div class="row">
         <div class="col-3">
              {{student.id}}: {{student.name}} ,  {{student.email}} ,{{student.address}} ,{{student.phone}}

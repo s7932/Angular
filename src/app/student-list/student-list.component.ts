@@ -7,8 +7,8 @@ import { Student } from '../student.model';
 })
 export class StudentListComponent {
   students: Student[] = [
-    { id: 1, name: "a",email:"a@gmail.com",address:"pune",phone:"1234567890",active:false,leaveDate:new Date() },
-    { id: 2, name: "b",email:"b@gmail.com",address:"mumbai",phone:"1234567890", active:true },
+    { id: 1, name: "a",email:"a@gmail.com",address:"pune",phone:"1234567890",active:false,leaveDate:new Date() ,marksAvg:70},
+    { id: 2, name: "b",email:"b@gmail.com",address:"mumbai",phone:"1234567890", active:true, marksAvg:95},
     { id: 3, name: "c",email:"c@gmail.com",address:"nagpur",phone:"1234567890", active:false,leaveDate:new Date() },
     ];
     selectedStudent?: Student;
