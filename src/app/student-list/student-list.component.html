@@ -1,5 +1,13 @@
 <ul class="list-group">
-    <li *ngFor="let student of students">
-        {{student.id}}: {{student.name}} ,  {{student.email}} ,{{student.address}} ,{{student.phone}}
+    <li *ngFor="let student of students" class="list-group-item">
+        <div class="row">
+        <div class="col-3">
+             {{student.id}}: {{student.name}} ,  {{student.email}} ,{{student.address}} ,{{student.phone}}
+        </div>
+    <div class="col-2">
+        <!-- <button class="btn btn-primary" (click)="editStudent(student)">Edit</button> -->
+        <button class="btn btn-danger" (click)="deleteStudent(student)">Delete</button>
+    </div>
+  </div>
     </li>
 </ul>

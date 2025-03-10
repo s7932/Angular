@@ -11,5 +11,12 @@ export class StudentListComponent {
     { id: 2, name: "b",email:"b@gmail.com",address:"mumbai",phone:"1234567890" },
     { id: 3, name: "c",email:"c@gmail.com",address:"nagpur",phone:"1234567890" },
     ];
-
+    editStudent(student:Student){
+        console.log(student);
+    }
+    deleteStudent(student:Student){ 
+        console.log(student);
+        let indexToDelete = this.students.indexOf(student);
+        this.students.splice(indexToDelete,1);
+    }
 }
