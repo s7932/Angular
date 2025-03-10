@@ -24,4 +24,15 @@ export class StudentListComponent {
         let indexToDelete = this.students.indexOf(student);
         this.students.splice(indexToDelete,1);
     }
+    saveStdtInList(student:Student){
+      if(student.id==-1){
+        student.id=this.students.length+1;
+        this.students.push(student);
+      }
+      else{
+        let indexToUpdate = this.students.indexOf(student);
+        this.students[indexToUpdate]=student;
+      }
+      this.selectedStudent=undefined;
+    }
 }

@@ -13,5 +13,5 @@
 
     <br>
     <button (click)="addStudent()">Add a new student</button>
-<student-details [student]="selectedStudent" ></student-details>
+<student-details [student]="selectedStudent" (onSaveStudent)="saveStdtInList($event)" ></student-details>
 </ul>

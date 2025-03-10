@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input ,Output,EventEmitter} from '@angular/core';
 import { Student } from '../student.model';
 
 @Component({
@@ -8,4 +8,11 @@ import { Student } from '../student.model';
 export class StudentDetailsComponent {
   @Input()
   student?: Student;
+
+  @Output() 
+  onSaveStudent: EventEmitter<Student> = new EventEmitter<Student>(); 
+
+  saveStudent() {
+    this.onSaveStudent.emit(this.student)
+  }
 }
